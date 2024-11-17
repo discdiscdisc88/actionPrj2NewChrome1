@@ -25,8 +25,6 @@ public class Test1inTestNg1 {
 	@BeforeMethod
 	public void setUp() throws Exception {
 	
-		WebDriverManager.chromedriver().setup();
-		
 		ChromeOptions options1 = new ChromeOptions();
 		options1.addArguments("--no-sandbox");
             	options1.addArguments("--disable-dev-shm-usage");
@@ -34,7 +32,8 @@ public class Test1inTestNg1 {
 		
 		
 		driver = new ChromeDriver(options1);
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(20000));
+		
 	
 	}
 	
