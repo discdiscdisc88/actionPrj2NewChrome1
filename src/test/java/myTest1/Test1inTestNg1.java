@@ -30,11 +30,7 @@ public class Test1inTestNg1 {
             	options1.addArguments("--disable-dev-shm-usage");
             	options1.addArguments("--headless");
 		
-		
 		driver = new ChromeDriver(options1);
-		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(20000));
-		
-	
 	}
 	
 	@Test
